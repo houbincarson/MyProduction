@@ -1,0 +1,1310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9153DA7D-C1E9-4CD2-B318-B9944B621725}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProduceManager</RootNamespace>
+    <AssemblyName>ProduceManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>ukynda.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/ProduceManager/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Imaging, Version=2.2.4.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.4.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.4.1, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\CodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DataTableExtend, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=7.6.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DevExpress.BonusSkins.v9.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DevExpress.Data.v9.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DevExpress.OfficeSkins.v9.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DevExpress.Utils.v9.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DevExpress.XtraBars.v9.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DevExpress.XtraEditors.v9.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DevExpress.XtraGrid.v9.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DevExpress.XtraLayout.v9.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DevExpress.XtraNavBar.v9.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DevExpress.XtraPrinting.v9.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>bin\Debug\DevExpress.XtraScheduler.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1.Core, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>bin\Debug\DevExpress.XtraScheduler.v9.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1.Extensions, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>bin\Debug\DevExpress.XtraScheduler.v9.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>bin\Debug\DevExpress.XtraSpellChecker.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v9.1.Core, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>bin\Debug\DevExpress.XtraSpellChecker.v9.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DevExpress.XtraTreeList.v9.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetSpeech, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IFramBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\IFramBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.BarTender, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Access, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="ServerRequestProcess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WcfSimpData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\WcfSimpData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bse\frmBseRoleRight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\frmBseRoleRight.Designer.cs">
+      <DependentUpon>frmBseRoleRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bse\frmBseRoleRightEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\frmBseRoleRightEdit.Designer.cs">
+      <DependentUpon>frmBseRoleRightEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bse\frmBseSetAdminEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\frmBseSetAdminEdit.Designer.cs">
+      <DependentUpon>frmBseSetAdminEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bse\frmBseSetEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\frmBseSetEdit.Designer.cs">
+      <DependentUpon>frmBseSetEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bse\frmBseFactoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\frmBseFactoryEdit.Designer.cs">
+      <DependentUpon>frmBseFactoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bse\frmBseUserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\frmBseUserEdit.Designer.cs">
+      <DependentUpon>frmBseUserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bse\frmBseUserRight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\frmBseUserRight.Designer.cs">
+      <DependentUpon>frmBseUserRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\ExcelHelper.cs" />
+    <Compile Include="Code\ExtPopupTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\ExtRepositoryItemTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\GridCheckMarksSelection.cs" />
+    <Compile Include="Code\ReportPrint.cs" />
+    <Compile Include="Code\UcTreeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\UcTreeList.Designer.cs">
+      <DependentUpon>UcTreeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysBusQueryBand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysBusQueryBand.Designer.cs">
+      <DependentUpon>frmSysBusQueryBand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdManager.Designer.cs">
+      <DependentUpon>frmProdManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdManagerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdManagerInfo.Designer.cs">
+      <DependentUpon>frmProdManagerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdMegerPNumberMgrEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdMegerPNumberMgrEdit.designer.cs">
+      <DependentUpon>frmProdMegerPNumberMgrEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectOperation.Designer.cs">
+      <DependentUpon>frmSelectOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmBseCostEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmBseCostEdit.Designer.cs">
+      <DependentUpon>frmBseCostEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmMoreCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmMoreCondition.Designer.cs">
+      <DependentUpon>frmMoreCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdAuthorVisibleToCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdAuthorVisibleToCust.Designer.cs">
+      <DependentUpon>frmProdAuthorVisibleToCust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReSetDept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReSetDept.designer.cs">
+      <DependentUpon>frmReSetDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectLimits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectLimits.Designer.cs">
+      <DependentUpon>frmSelectLimits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSetSpecialFeeToCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSetSpecialFeeToCust.Designer.cs">
+      <DependentUpon>frmSetSpecialFeeToCust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSetSpecialFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSetSpecialFee.Designer.cs">
+      <DependentUpon>frmSetSpecialFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectProdMany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectProdMany.Designer.cs">
+      <DependentUpon>frmSelectProdMany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectProdMgr1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectProdMgr1.Designer.cs">
+      <DependentUpon>frmSelectProdMgr1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectProdOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectProdOne.Designer.cs">
+      <DependentUpon>frmSelectProdOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmBseContrlEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmBseContrlEdit.Designer.cs">
+      <DependentUpon>frmBseContrlEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmBsuSetQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmBsuSetQuery.Designer.cs">
+      <DependentUpon>frmBsuSetQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmBsuSetEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmBsuSetEdit.Designer.cs">
+      <DependentUpon>frmBsuSetEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmBseContrlEditAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmBseContrlEditAll.Designer.cs">
+      <DependentUpon>frmBseContrlEditAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\CApplication.cs" />
+    <Compile Include="Code\COM_ProtConnect.cs" />
+    <Compile Include="Code\DBHelper.cs" />
+    <Compile Include="Code\ExeclImportHelper.cs" />
+    <Compile Include="Code\FileZipUnZip.cs" />
+    <Compile Include="Code\frmEditorBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\frmReportServicePreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\frmRS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\frmRS.Designer.cs">
+      <DependentUpon>frmRS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\MyEncrypt.cs" />
+    <Compile Include="Code\ServerRefManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\ShareAccessManager.cs" />
+    <Compile Include="Code\StaticFunctions.cs" />
+    <Compile Include="Bse\frmBseDeptEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\frmBseDeptEdit.Designer.cs">
+      <DependentUpon>frmBseDeptEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\UcTxtPopup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\UcTxtPopup.Designer.cs">
+      <DependentUpon>UcTxtPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\UkyndaGcEdit.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectSpecialSet.cs" />
+    <Compile Include="Share\frmBasicEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmBasicEdit.Designer.cs">
+      <DependentUpon>frmBasicEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmBatchEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmBatchEdit.Designer.cs">
+      <DependentUpon>frmBatchEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditPsw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditPsw.Designer.cs">
+      <DependentUpon>frmEditPsw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmExcelShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmExcelShow.Designer.cs">
+      <DependentUpon>frmExcelShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainBase.Designer.cs">
+      <DependentUpon>frmMainBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bse\frmBseUserRoleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\frmBseUserRoleEdit.Designer.cs">
+      <DependentUpon>frmBseUserRoleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmImportOrd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmImportOrd.Designer.cs">
+      <DependentUpon>frmImportOrd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysBusAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysBusAdd.Designer.cs">
+      <DependentUpon>frmSysBusAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysBusOPCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysBusOPCenter.Designer.cs">
+      <DependentUpon>frmSysBusOPCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysKindManger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysKindManger.Designer.cs">
+      <DependentUpon>frmSysKindManger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysRpts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysRpts.Designer.cs">
+      <DependentUpon>frmSysRpts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSelect.Designer.cs">
+      <DependentUpon>frmSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Share\frmSelectRptTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSelectRptTicket.Designer.cs">
+      <DependentUpon>frmSelectRptTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysBusQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysBusQuery.Designer.cs">
+      <DependentUpon>frmSysBusQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysBusEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysBusEdit.Designer.cs">
+      <DependentUpon>frmSysBusEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysBusInfoSplit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysBusInfoSplit.Designer.cs">
+      <DependentUpon>frmSysBusInfoSplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysBusInfoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysBusInfoAdd.Designer.cs">
+      <DependentUpon>frmSysBusInfoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysInfoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysInfoAdd.Designer.cs">
+      <DependentUpon>frmSysInfoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmUpdateConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmUpdateConfirm.Designer.cs">
+      <DependentUpon>frmUpdateConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysBseManger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysBseManger.Designer.cs">
+      <DependentUpon>frmSysBseManger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysInfoAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysInfoAddItem.Designer.cs">
+      <DependentUpon>frmSysInfoAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmBseContrlEditGvSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmBseContrlEditGvSet.Designer.cs">
+      <DependentUpon>frmBseContrlEditGvSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmBseContrlEditTabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmBseContrlEditTabel.Designer.cs">
+      <DependentUpon>frmBseContrlEditTabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmBseContrlEditSrc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmBseContrlEditSrc.Designer.cs">
+      <DependentUpon>frmBseContrlEditSrc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmBsuSetQueryFastAddInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmBsuSetQueryFastAddInfo.Designer.cs">
+      <DependentUpon>frmBsuSetQueryFastAddInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysBusRpts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysBusRpts.Designer.cs">
+      <DependentUpon>frmSysBusRpts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmSysInfoAddMore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmSysInfoAddMore.Designer.cs">
+      <DependentUpon>frmSysInfoAddMore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Share\frmBasicEditPicMore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Share\frmBasicEditPicMore.Designer.cs">
+      <DependentUpon>frmBasicEditPicMore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frmBasicEditSpecial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frmBasicEditSpecial.Designer.cs">
+      <DependentUpon>frmBasicEditSpecial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frmPickPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frmPickPicture.designer.cs">
+      <DependentUpon>frmPickPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\gl\frmProdSaleMasterEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\gl\frmProdSaleMasterEdit.Designer.cs">
+      <DependentUpon>frmProdSaleMasterEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdMegerPNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdMegerPNumber.Designer.cs">
+      <DependentUpon>frmProdMegerPNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmMoreConditionBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmMoreConditionBus.Designer.cs">
+      <DependentUpon>frmMoreConditionBus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdAreaRel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdAreaRel.Designer.cs">
+      <DependentUpon>frmProdAreaRel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectLimitsArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectLimitsArea.Designer.cs">
+      <DependentUpon>frmSelectLimitsArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdAreaRelMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdAreaRelMgr.Designer.cs">
+      <DependentUpon>frmProdAreaRelMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdMegerPNumberMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdMegerPNumberMgr.Designer.cs">
+      <DependentUpon>frmProdMegerPNumberMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdPromotionMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdPromotionMgr.Designer.cs">
+      <DependentUpon>frmProdPromotionMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdMegerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdMegerInfo.Designer.cs">
+      <DependentUpon>frmProdMegerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdAreaRelMgrEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdAreaRelMgrEdit.Designer.cs">
+      <DependentUpon>frmProdAreaRelMgrEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmBseSaleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmBseSaleEdit.Designer.cs">
+      <DependentUpon>frmBseSaleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmBseCostEdit_Bak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmBseCostEdit_Bak.Designer.cs">
+      <DependentUpon>frmBseCostEdit_Bak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\Pager\DxPager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectProdMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmSelectProdMgr.Designer.cs">
+      <DependentUpon>frmSelectProdMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\Pager\Pager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdAuditMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdAuditMgr.Designer.cs">
+      <DependentUpon>frmProdAuditMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdAuditMgrInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdAuditMgrInfo.Designer.cs">
+      <DependentUpon>frmProdAuditMgrInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdFeeComfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdFeeComfirm.Designer.cs">
+      <DependentUpon>frmProdFeeComfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdFeeComfirm_Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdFeeComfirm_Log.designer.cs">
+      <DependentUpon>frmProdFeeComfirm_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdPromotionMgrEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\产品库\frmProdPromotionMgrEdit.designer.cs">
+      <DependentUpon>frmProdPromotionMgrEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\信誉楼\frmProdSaleMasterEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\信誉楼\frmProdSaleMasterEdit.Designer.cs">
+      <DependentUpon>frmProdSaleMasterEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\铭进工厂\frmTstPowderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\铭进工厂\frmTstPowderEdit.Designer.cs">
+      <DependentUpon>frmTstPowderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\铭进工厂\frmTst_MoveEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\铭进工厂\frmTst_MoveEdit.Designer.cs">
+      <DependentUpon>frmTst_MoveEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\铭进工厂\frmTst_StorageChkEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\铭进工厂\frmTst_StorageChkEdit.Designer.cs">
+      <DependentUpon>frmTst_StorageChkEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\铭进工厂\frmTst_StorageChkQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\铭进工厂\frmTst_StorageChkQuery.Designer.cs">
+      <DependentUpon>frmTst_StorageChkQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\铭进工厂\frmTst_UserOverLossChk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\铭进工厂\frmTst_UserOverLossChk.Designer.cs">
+      <DependentUpon>frmTst_UserOverLossChk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统特殊页面\铭进工厂\frmTst_UserReceDeliChkEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统特殊页面\铭进工厂\frmTst_UserReceDeliChkEdit.Designer.cs">
+      <DependentUpon>frmTst_UserReceDeliChkEdit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bse\frmBseRoleRight.resx">
+      <DependentUpon>frmBseRoleRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\frmBseRoleRightEdit.resx">
+      <DependentUpon>frmBseRoleRightEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\frmBseSetAdminEdit.resx">
+      <DependentUpon>frmBseSetAdminEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\frmBseSetEdit.resx">
+      <DependentUpon>frmBseSetEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\frmBseFactoryEdit.resx">
+      <DependentUpon>frmBseFactoryEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\frmBseUserEdit.resx">
+      <DependentUpon>frmBseUserEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\frmBseUserRight.resx">
+      <DependentUpon>frmBseUserRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\ExtPopupTree.resx">
+      <DependentUpon>ExtPopupTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\UcTreeList.resx">
+      <DependentUpon>UcTreeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Share\frmSysBusQueryBand.resx">
+      <DependentUpon>frmSysBusQueryBand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_MatInStock.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_MatMove.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_ProdChgEdit.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_ProdInStockOrd.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_ProdMoveOrd.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_ProdOrdersOut.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_ProdReturnOrd.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_ProdSaleRetInOrd.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_ProdSaleRetOrd.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_Prod_SaleOrd.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_Prod_SaleOutOrd.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_Prod_SaleOutOrdGS - 副本.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_Prod_SaleOutOrdGS.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_SeSiIMove.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_SeSiInStock.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_SeSiReturn.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_SeSiSaleOut.rdlc" />
+    <EmbeddedResource Include="系统报表\百泰金\Rpt_SeSiSaleRet.rdlc" />
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdAreaRel.resx">
+      <DependentUpon>frmProdAreaRel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdManager.resx">
+      <DependentUpon>frmProdManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdManagerInfo.resx">
+      <DependentUpon>frmProdManagerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdMegerPNumberMgrEdit.resx">
+      <DependentUpon>frmProdMegerPNumberMgrEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmSelectOperation.resx">
+      <DependentUpon>frmSelectOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmBseCostEdit.resx">
+      <DependentUpon>frmBseCostEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmMoreCondition.resx">
+      <DependentUpon>frmMoreCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdAuthorVisibleToCust.resx">
+      <DependentUpon>frmProdAuthorVisibleToCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReSetDept.resx">
+      <DependentUpon>frmReSetDept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmSelectLimits.resx">
+      <DependentUpon>frmSelectLimits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmSetSpecialFeeToCust.resx">
+      <DependentUpon>frmSetSpecialFeeToCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmSetSpecialFee.resx">
+      <DependentUpon>frmSetSpecialFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmSelectProdMany.resx">
+      <DependentUpon>frmSelectProdMany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmSelectProdMgr1.resx">
+      <DependentUpon>frmSelectProdMgr1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmSelectProdOne.resx">
+      <DependentUpon>frmSelectProdOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmBseContrlEdit.resx">
+      <DependentUpon>frmBseContrlEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmBsuSetQuery.resx">
+      <DependentUpon>frmBsuSetQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmBsuSetEdit.resx">
+      <DependentUpon>frmBsuSetEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmBseContrlEditAll.resx">
+      <DependentUpon>frmBseContrlEditAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\frmEditorBase.resx">
+      <DependentUpon>frmEditorBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\frmReportServicePreview.resx">
+      <DependentUpon>frmReportServicePreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\frmBseDeptEdit.resx">
+      <DependentUpon>frmBseDeptEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\frmRS.resx">
+      <DependentUpon>frmRS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\UcTxtPopup.resx">
+      <DependentUpon>UcTxtPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmBasicEdit.resx">
+      <DependentUpon>frmBasicEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmBatchEdit.resx">
+      <DependentUpon>frmBatchEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditPsw.resx">
+      <DependentUpon>frmEditPsw.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmExcelShow.resx">
+      <DependentUpon>frmExcelShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainBase.resx">
+      <DependentUpon>frmMainBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\frmBseUserRoleEdit.resx">
+      <DependentUpon>frmBseUserRoleEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmImportOrd.resx">
+      <DependentUpon>frmImportOrd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysBusAdd.resx">
+      <DependentUpon>frmSysBusAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysBusOPCenter.resx">
+      <DependentUpon>frmSysBusOPCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysKindManger.resx">
+      <DependentUpon>frmSysKindManger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysRpts.resx">
+      <DependentUpon>frmSysRpts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSelect.resx">
+      <DependentUpon>frmSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\frmBseRoleEdit.resx">
+      <DependentUpon>frmBseRoleEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\frmBseMenuEdit.resx">
+      <DependentUpon>frmBseMenuEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\frmBseRoleUserEdit.resx">
+      <DependentUpon>frmBseRoleUserEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\frmBusItemAllQuery.resx">
+      <DependentUpon>frmBusItemAllQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\frmRpt_SysRpt.resx">
+      <DependentUpon>frmRpt_SysRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\frmRpt_SysRptItem.resx">
+      <DependentUpon>frmRpt_SysRptItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Share\frmSelectRptTicket.resx">
+      <DependentUpon>frmSelectRptTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysBusQuery.resx">
+      <DependentUpon>frmSysBusQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysBusEdit.resx">
+      <DependentUpon>frmSysBusEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysBusInfoSplit.resx">
+      <DependentUpon>frmSysBusInfoSplit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysBusInfoAdd.resx">
+      <DependentUpon>frmSysBusInfoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysInfoAdd.resx">
+      <DependentUpon>frmSysInfoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmUpdateConfirm.resx">
+      <DependentUpon>frmUpdateConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysBseManger.resx">
+      <DependentUpon>frmSysBseManger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysInfoAddItem.resx">
+      <DependentUpon>frmSysInfoAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmBseContrlEditGvSet.resx">
+      <DependentUpon>frmBseContrlEditGvSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmBseContrlEditTabel.resx">
+      <DependentUpon>frmBseContrlEditTabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmBseContrlEditSrc.resx">
+      <DependentUpon>frmBseContrlEditSrc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmBsuSetQueryFastAddInfo.resx">
+      <DependentUpon>frmBsuSetQueryFastAddInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysBusRpts.resx">
+      <DependentUpon>frmSysBusRpts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmSysInfoAddMore.resx">
+      <DependentUpon>frmSysInfoAddMore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share\frmBasicEditPicMore.resx">
+      <DependentUpon>frmBasicEditPicMore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frmBasicEditSpecial.resx">
+      <DependentUpon>frmBasicEditSpecial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frmPickPicture.resx">
+      <DependentUpon>frmPickPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统报表\铭进工厂\ProductInfoRpts.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_Fy_ProductionDate.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_Fy_ProductionDateMore.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_StorgeCheck_All.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_Sys_BckOrders.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_Sys_OOrders.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_Sys_OrdersNew.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_Sys_ProdOrders.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_Sys_ProdOrdersPart.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_Sys_RetOrders.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_Tst_MaterialOrdIn.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_Tst_MaterialOrdInCW.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_Tst_MaterialOrdOut.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\Rpt_Tst_MaterialOrdOutCW.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\UserRpts.rdlc" />
+    <EmbeddedResource Include="系统报表\铭进工厂\复件 Rpt_Sys_OrdersNew.rdlc" />
+    <EmbeddedResource Include="系统特殊页面\gl\frmProdSaleMasterEdit.resx">
+      <DependentUpon>frmProdSaleMasterEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdMegerPNumber.resx">
+      <DependentUpon>frmProdMegerPNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmMoreConditionBus.resx">
+      <DependentUpon>frmMoreConditionBus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmSelectLimitsArea.resx">
+      <DependentUpon>frmSelectLimitsArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdAreaRelMgr.resx">
+      <DependentUpon>frmProdAreaRelMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdMegerPNumberMgr.resx">
+      <DependentUpon>frmProdMegerPNumberMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdPromotionMgr.resx">
+      <DependentUpon>frmProdPromotionMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdMegerInfo.resx">
+      <DependentUpon>frmProdMegerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdAreaRelMgrEdit.resx">
+      <DependentUpon>frmProdAreaRelMgrEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmBseSaleEdit.resx">
+      <DependentUpon>frmBseSaleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmBseCostEdit_Bak.resx">
+      <DependentUpon>frmBseCostEdit_Bak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\Pager\DxPager.resx">
+      <DependentUpon>DxPager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmSelectProdMgr.resx">
+      <DependentUpon>frmSelectProdMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\Pager\Pager.resx">
+      <DependentUpon>Pager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdAuditMgr.resx">
+      <DependentUpon>frmProdAuditMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdAuditMgrInfo.resx">
+      <DependentUpon>frmProdAuditMgrInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdFeeComfirm.resx">
+      <DependentUpon>frmProdFeeComfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdFeeComfirm_Log.resx">
+      <DependentUpon>frmProdFeeComfirm_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\产品库\frmProdPromotionMgrEdit.resx">
+      <DependentUpon>frmProdPromotionMgrEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\信誉楼\frmProdSaleMasterEdit.resx">
+      <DependentUpon>frmProdSaleMasterEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\铭进工厂\frmTstPowderEdit.resx">
+      <DependentUpon>frmTstPowderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\铭进工厂\frmTst_MoveEdit.resx">
+      <DependentUpon>frmTst_MoveEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\铭进工厂\frmTst_StorageChkEdit.resx">
+      <DependentUpon>frmTst_StorageChkEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\铭进工厂\frmTst_StorageChkQuery.resx">
+      <DependentUpon>frmTst_StorageChkQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\铭进工厂\frmTst_UserOverLossChk.resx">
+      <DependentUpon>frmTst_UserOverLossChk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统特殊页面\铭进工厂\frmTst_UserReceDeliChkEdit.resx">
+      <DependentUpon>frmTst_UserReceDeliChkEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Rpt\frmBusItemAllQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rpt\frmBusItemAllQuery.Designer.cs">
+      <DependentUpon>frmBusItemAllQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rpt\frmRpt_SysRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rpt\frmRpt_SysRpt.Designer.cs">
+      <DependentUpon>frmRpt_SysRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rpt\frmRpt_SysRptItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rpt\frmRpt_SysRptItem.Designer.cs">
+      <DependentUpon>frmRpt_SysRptItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PrdManager\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Bse\frmBseRoleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\frmBseRoleEdit.Designer.cs">
+      <DependentUpon>frmBseRoleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bse\frmBseMenuEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\frmBseMenuEdit.Designer.cs">
+      <DependentUpon>frmBseMenuEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bse\frmBseRoleUserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\frmBseRoleUserEdit.Designer.cs">
+      <DependentUpon>frmBseRoleUserEdit.cs</DependentUpon>
+    </Compile>
+    <None Include="系统BarTender模板\铭进工厂\员工交货.btw" />
+    <None Include="系统BarTender模板\铭进工厂\员工损耗.btw" />
+    <None Include="系统BarTender模板\铭进工厂\员工汇总.btw" />
+    <None Include="系统BarTender模板\铭进工厂\员工领货.btw" />
+    <None Include="系统BarTender模板\铭进工厂\实物盘点小票.btw" />
+    <None Include="系统BarTender模板\铭进工厂\移入库.btw" />
+    <None Include="系统BarTender模板\铭进工厂\移出库.btw" />
+    <None Include="系统文档\开发说明.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dll\AForge.Imaging.dll" />
+    <Content Include="dll\AForge.Video.DirectShow.dll" />
+    <Content Include="dll\AForge.Video.dll" />
+    <Content Include="dll\CodeLib.dll" />
+    <Content Include="dll\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="dll\CrystalDecisions.ReportSource.dll" />
+    <Content Include="dll\CrystalDecisions.Shared.dll" />
+    <Content Include="dll\CrystalDecisions.Windows.Forms.dll" />
+    <Content Include="dll\DataTableExtend.dll" />
+    <Content Include="dll\DevComponents.DotNetBar2.dll" />
+    <Content Include="dll\DevExpress.BonusSkins.v9.1.dll" />
+    <Content Include="dll\DevExpress.Data.v9.1.dll" />
+    <Content Include="dll\DevExpress.Localization.v11.1.dll" />
+    <Content Include="dll\DevExpress.OfficeSkins.v9.1.dll" />
+    <Content Include="dll\DevExpress.Utils.v9.1.dll" />
+    <Content Include="dll\DevExpress.XtraBars.v9.1.dll" />
+    <Content Include="dll\DevExpress.XtraEditors.v9.1.dll" />
+    <Content Include="dll\DevExpress.XtraGrid.v9.1.dll" />
+    <Content Include="dll\DevExpress.XtraLayout.v9.1.dll" />
+    <Content Include="dll\DevExpress.XtraNavBar.v9.1.dll" />
+    <Content Include="dll\DevExpress.XtraPrinting.v9.1.dll" />
+    <Content Include="dll\DevExpress.XtraTreeList.v9.1.dll" />
+    <Content Include="dll\DotNetSpeech.dll" />
+    <Content Include="dll\ExtendControl.dll" />
+    <Content Include="dll\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="dll\IFramBase.dll" />
+    <Content Include="dll\Interop.BarTender.dll" />
+    <Content Include="dll\NPOI.dll" />
+    <Content Include="dll\NPOI.OOXML.dll" />
+    <Content Include="dll\NPOI.OpenXml4Net.dll" />
+    <Content Include="dll\NPOI.OpenXmlFormats.dll" />
+    <Content Include="dll\ServerRequestProcess.dll" />
+    <Content Include="dll\WcfSimpData.dll" />
+    <Content Include="ukynda.ico" />
+    <Content Include="系统文档\存储过程示例.sql" />
+    <Content Include="系统文档\系统图标\Excel导入.png" />
+    <Content Include="系统文档\系统图标\作废.png" />
+    <Content Include="系统文档\系统图标\保存.png" />
+    <Content Include="系统文档\系统图标\保存样式.png" />
+    <Content Include="系统文档\系统图标\修改.png" />
+    <Content Include="系统文档\系统图标\删除.png" />
+    <Content Include="系统文档\系统图标\删除样式.png" />
+    <Content Include="系统文档\系统图标\刷新.png" />
+    <Content Include="系统文档\系统图标\加工拆单.png" />
+    <Content Include="系统文档\系统图标\反审.png" />
+    <Content Include="系统文档\系统图标\启用.png" />
+    <Content Include="系统文档\系统图标\完成.png" />
+    <Content Include="系统文档\系统图标\审核.png" />
+    <Content Include="系统文档\系统图标\导出Excel.png" />
+    <Content Include="系统文档\系统图标\导到维护.png" />
+    <Content Include="系统文档\系统图标\打印.png" />
+    <Content Include="系统文档\系统图标\打开报表.png" />
+    <Content Include="系统文档\系统图标\批量修改.png" />
+    <Content Include="系统文档\系统图标\批量新增.png" />
+    <Content Include="系统文档\系统图标\撤销.png" />
+    <Content Include="系统文档\系统图标\撤销完成.png" />
+    <Content Include="系统文档\系统图标\新增.png" />
+    <Content Include="系统文档\系统图标\确认.png" />
+    <Content Include="系统文档\系统图标\详细信息.png" />
+    <Content Include="系统文档\系统图标\退回.png" />
+    <None Include="Service References\PrdManager\ShareWS.disco" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\PrdManager\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PrdManager\configuration.svcinfo" />
+    <None Include="Service References\PrdManager\configuration91.svcinfo" />
+    <None Include="Service References\PrdManager\ShareWS.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PrdManager\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="系统报表\银行事业部\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

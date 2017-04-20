@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99CFE765-DC94-414A-9BFC-F7B1F34203EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExtendControl</RootNamespace>
+    <AssemblyName>ExtendControl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataTableExtend, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DataTableExtend.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v9.1">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.BonusSkins.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.Data.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v9.1">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.OfficeSkins.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.Utils.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraBars.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v9.1.Design, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraBars.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraEditors.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.1.Design, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraEditors.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraGrid.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v9.1.Design, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraGrid.v9.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v9.1">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraLayout.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraNavBar.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v9.1">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraPrinting.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraScheduler.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1.Core">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraScheduler.v9.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.1.Extensions">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraScheduler.v9.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v9.1">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraSpellChecker.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v9.1.Core">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraSpellChecker.v9.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\ProduceManager\bin\Debug\DevExpress.XtraTreeList.v9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="IFramBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\IFramBase.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExtCheckedComboBoxEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtDataPager.cs" />
+    <Compile Include="ExtendGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendPopupGridEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtPopupTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtRepositoryItemCheckedBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtRepositoryItemLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtRepositoryItemTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtRpyLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingCelLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SingLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExtendPopupGridEdit.resx">
+      <DependentUpon>ExtendPopupGridEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtPopupTree.resx">
+      <DependentUpon>ExtPopupTree.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dll\DataTableExtend.dll" />
+    <Content Include="dll\IFramBase.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
