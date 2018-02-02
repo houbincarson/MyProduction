@@ -176,7 +176,6 @@ namespace ProduceManager
                     StaticFunctions.SetGridViewStyleFormatCondition(gvChild, dtBtnsM);
                 }
                 StaticFunctions.SetGridViewStyleFormatCondition(gcItems[strGv], dtBtnsM);
-
                 drTabs = dtTabs.Select("ShowGridChkSel=1 AND GridViewName='" + strGv + "'");
                 if (drTabs.Length == 1)
                 {

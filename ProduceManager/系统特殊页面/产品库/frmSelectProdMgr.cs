@@ -26,7 +26,7 @@ namespace ProduceManager
             InitializeComponent();
         }
         //图片存放路径，保存在App.config，只读 
-        public string frmImageFilePath = System.Configuration.ConfigurationManager.AppSettings["ImageFilePath"];
+        public string frmImageFilePath = System.Configuration.ConfigurationManager.AppSettings["ImageFilePath"].ToString();
         public string frmImageReadFilePath = ConfigurationManager.AppSettings["ReadFile"]; 
         string strSpName = "Bse_ProductManager_Business_Add_Edit_Del";
         string PmIds = string.Empty;

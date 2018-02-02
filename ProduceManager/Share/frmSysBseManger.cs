@@ -858,8 +858,7 @@ namespace ProduceManager
         private void DoAddInfoSpecial(DataRow drBtn)
         {
             UkyndaGcEdit GcEdit = UkyndaGcItems[drBtn["EditGroupCName"].ToString()];
-            if (GcEdit.GridViewEdit.GridControl.DataSource == null)
-            {
+            if (GcEdit.GridViewEdit.GridControl.DataSource == null){
                 Query();
             }
             GcEdit.GridViewEdit.ClearColumnsFilter();

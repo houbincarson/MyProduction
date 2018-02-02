@@ -1337,13 +1337,13 @@ namespace ProduceManager
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
                     string fileName = dlg.FileName;
-                    //if (!_gw.OptionsSelection.MultiSelect)
-                    //{
-                    //    _gw.OptionsSelection.MultiSelect = true;
-                    //}
-                    //_gw.SelectAll();
-                    //_gw.CopyToClipboard();
-                    //File.WriteAllText(dlg.FileName, Clipboard.GetText(), Encoding.Unicode);
+                    if (!_gw.OptionsSelection.MultiSelect)
+                    {
+                        _gw.OptionsSelection.MultiSelect = true;
+                    }
+                    _gw.SelectAll();
+                    _gw.CopyToClipboard();
+                    File.WriteAllText(dlg.FileName, Clipboard.GetText(), Encoding.Unicode);
 
                     if (strNoExcelFileds != null)
                     {
@@ -1353,17 +1353,17 @@ namespace ProduceManager
                         }
                     }
                     _gw.OptionsPrint.AutoWidth = false;
-                    _gw.ExportToXls(fileName, new DevExpress.XtraPrinting.XlsExportOptions(true, true, true, true, true));
+                    //_gw.ExportToXls(fileName, new DevExpress.XtraPrinting.XlsExportOptions(true, true, true, true, true));
                     //_gw.ExportToXls(fileName, new DevExpress.XtraPrinting.XlsExportOptions(DevExpress.XtraPrinting.TextExportMode.Text, true, true, true, true));
                     //客户机必须有DevExpress.XtraPrinting.v9.1.dll，否则无法导出，而方法又不需要该dll
 
                     if (MessageBox.Show("已成功导出到：" + fileName + ",是否打开？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                     {
-                        //Microsoft.Office.Interop.Excel.Application xApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
-                        //xApp.Visible = true;
-                        //xApp.Workbooks._Open(fileName, Missing.Value, Missing.Value, Missing.Value,
-                        //    Missing.Value, Missing.Value, Missing.Value, Missing.Value,
-                        //     Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+                        Microsoft.Office.Interop.Excel.Application xApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
+                        xApp.Visible = true;
+                        xApp.Workbooks._Open(fileName, Missing.Value, Missing.Value, Missing.Value,
+                            Missing.Value, Missing.Value, Missing.Value, Missing.Value,
+                             Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
                         System.Diagnostics.ProcessStartInfo info = new System.Diagnostics.ProcessStartInfo(); 
                         info.FileName = fileName; 
                         try

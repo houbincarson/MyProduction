@@ -109,7 +109,6 @@ namespace ProduceManager
             req.ProceDb = this.BtProduceCS;
             DataTable dt = ServerRequestProcess.DbRequest.DataRequest_By_DataTable(req);
             dt.AcceptChanges();
-            //DataTable dt = PrdManagerSoapClient.GetTableByStoredProc("Get_Bse_User", "Number,PassWord", new string[] { this.txtUserId.Text, txtUserPwd.Text });
             if (dt.Rows.Count <= 0)
             {
                 MessageBox.Show("密码或用户名不正确.");
@@ -127,10 +126,6 @@ namespace ProduceManager
                 req.ProceDb = this.BtProduceCS;
                 DataTable dtAccount = ServerRequestProcess.DbRequest.DataRequest_By_DataTable(req);
                 dtAccount.AcceptChanges();
-
-                //DataTable dtAccount = PrdManagerSoapClient.GetTableByStoredProc("Get_Account_Menus_By_User", "User_Id",
-                //    new string[] { dr["User_id"].ToString() });
-
                 DataTable dtAllow = dtAccount.Clone();
                 foreach (DataRow drA in dtAccount.Rows)
                 {
@@ -197,13 +192,6 @@ namespace ProduceManager
                 req.ProceDb = this.BtProduceCS;
                 CApplication.App.DtUserBasicSet = ServerRequestProcess.DbRequest.DataRequest_By_DataTable(req);
                 CApplication.App.DtUserBasicSet.AcceptChanges();
-
-                //CApplication.App.DtUserBasicSet = PrdManagerSoapClient.GetDataSetByStoredProc("Get_Form_Load_Table", "Form,EUser_Id,EDept_Id,EFy_Id",
-                //            new string[] { "frmLogin"
-                //    , CApplication.App.CurrentSession.UserId.ToString()
-                //    , CApplication.App.CurrentSession.DeptId.ToString()
-                //    , CApplication.App.CurrentSession.FyId.ToString() }).Tables[0];
-
                 //保存用户登录信息到UserInfo.xml
                 if (dt.Columns.Contains("UserInfo") && dr["UserInfo"].ToString() == "1")
                 {
@@ -215,56 +203,6 @@ namespace ProduceManager
                 this.Close();
             }
         }
-
-        //private void frmLogin_Shown(object sender, EventArgs e)
-        //{
-        //    //string strNewVers = PrdManagerSoapClient.GetUpdateFileVersion( strUrl,Application.ProductName + ".exe");
-        //    //if (strNewVers == string.Empty || Application.ProductVersion == strNewVers)
-        //    //{
-        //    //    return;
-        //    //}
-
-        //    string[] strKey = "Version".Split(",".ToCharArray());
-        //    string[] strVal = new string[] { Application.ProductVersion };
-        //    MethodRequest req = new MethodRequest();
-        //    req.ParamKeys = strKey;
-        //    req.ParamVals = strVal;
-        //    req.ProceName = "Get_IsNeedVersionUpdate";
-        //    req.ProceDb = this.BtProduceCS;
-        //    DataTable dt = ServerRequestProcess.DbRequest.DataRequest_By_DataTable(req);
-        //    if (dt.Rows.Count == 0)
-        //        return;
-
-        //    if (dt.Rows[0]["NeedUpdate"].ToString() == "0")
-        //        return;
-
-        //    if (MessageBox.Show("系统有新版本，是否更新,确定后请耐心等待文件下载？", "更新确认", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) != DialogResult.Yes)
-        //    {
-        //        return;
-        //    }
-        //    try
-        //    {
-        //        string strUNet = System.Configuration.ConfigurationManager.AppSettings["UpdateNet"];
-        //        if (string.IsNullOrEmpty(strUNet))
-        //        {
-        //            MessageBox.Show("更新出错,请与系统人员联系.");
-        //            return;
-        //        }
-        //        string strFile = Application.StartupPath + "\\" + Application.ProductName + ".rar";
-        //        if (File.Exists(strFile))
-        //        {
-        //            File.SetAttributes(strFile, FileAttributes.Normal);
-        //        }
-        //        File.WriteAllBytes(strFile, PrdManagerSoapClient.GetUpdateFileByte(strUrl, Application.ProductName + strUNet + ".rar"));
-        //        System.Diagnostics.Process.Start("AutoUpdate.exe", Application.ProductName);
-        //        Application.Exit();
-        //    }
-        //    catch (Exception err)
-        //    {
-        //        MessageBox.Show("下载更新文件出错：" + err.Message);
-        //    }
-        //}
-
 
         private void frmLogin_Shown(object sender, EventArgs e)
         {
@@ -282,7 +220,7 @@ namespace ProduceManager
             if (dt.Rows[0]["NeedUpdate"].ToString() == "0")
                 return;
 
-            if (MessageBox.Show("系统有新版本，是否更新,确定后请耐心等待文件下载？", "更新确认", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) != DialogResult.Yes)
+            if (MessageBox.Show(@"系统有新版本，是否更新,确定后请耐心等待文件下载？", @"更新确认", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) != DialogResult.Yes)
             {
                 return;
             }
@@ -322,30 +260,8 @@ namespace ProduceManager
             }
             catch (Exception err)
             {
-                MessageBox.Show("下载更新文件出错：" + err.Message);
+                MessageBox.Show(@"下载更新文件出错：" + err.Message);
             }
-            //string strNewVers = logisticsManagerSoapClient.GetUpdateFileVersion(Application.ProductName + ".exe");
-            //if (Application.ProductVersion != strNewVers && strNewVers != string.Empty)
-            //{
-            //    if (MessageBox.Show("系统有新版本，是否更新,确定后请耐心等待文件下载？", "更新确认", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-            //    {
-            //        try
-            //        {
-            //            string strFile = Application.StartupPath + "\\" + Application.ProductName + ".rar";
-            //            if (File.Exists(strFile))
-            //            {
-            //                File.SetAttributes(strFile, FileAttributes.Normal);
-            //            }
-            //            File.WriteAllBytes(strFile, logisticsManagerSoapClient.GetUpdateFileByte(Application.ProductName + ".rar"));
-            //            System.Diagnostics.Process.Start("AutoUpdate.exe", Application.ProductName);
-            //            Application.Exit();
-            //        }
-            //        catch (Exception err)
-            //        {
-            //            MessageBox.Show("下载更新文件出错：" + err.Message);
-            //        }
-            //    }
-            //}
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)

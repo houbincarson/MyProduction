@@ -25,6 +25,8 @@
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>http://localhost/ProduceManager/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -37,10 +39,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>true</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -80,75 +80,53 @@
     </Reference>
     <Reference Include="DataTableExtend, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=7.6.0.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.BonusSkins.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.BonusSkins.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\DevExpress.BonusSkins.v9.1.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>dll\DevExpress.BonusSkins.v15.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\DevExpress.Data.v9.1.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>dll\DevExpress.Data.v15.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.OfficeSkins.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\DevExpress.OfficeSkins.v9.1.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>dll\DevExpress.Printing.v15.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Utils.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.SpellChecker.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\DevExpress.Utils.v9.1.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>dll\DevExpress.SpellChecker.v15.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\DevExpress.XtraBars.v9.1.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>dll\DevExpress.Utils.v15.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\DevExpress.XtraEditors.v9.1.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>dll\DevExpress.XtraBars.v15.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\DevExpress.XtraGrid.v9.1.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>dll\DevExpress.XtraEditors.v15.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\DevExpress.XtraLayout.v9.1.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>dll\DevExpress.XtraGrid.v15.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\DevExpress.XtraNavBar.v9.1.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>dll\DevExpress.XtraLayout.v15.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\DevExpress.XtraPrinting.v9.1.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>dll\DevExpress.XtraNavBar.v15.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <HintPath>bin\Debug\DevExpress.XtraScheduler.v9.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v9.1.Core, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <HintPath>bin\Debug\DevExpress.XtraScheduler.v9.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v9.1.Extensions, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>bin\Debug\DevExpress.XtraScheduler.v9.1.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraSpellChecker.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <HintPath>bin\Debug\DevExpress.XtraSpellChecker.v9.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraSpellChecker.v9.1.Core, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <HintPath>bin\Debug\DevExpress.XtraSpellChecker.v9.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\DevExpress.XtraTreeList.v9.1.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>dll\DevExpress.XtraPrinting.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DevExpress.XtraTreeList.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="DotNetSpeech, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
@@ -162,6 +140,7 @@
     <Reference Include="Interop.BarTender, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Office.Interop.Access, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <Private>True</Private>
+      <HintPath>dll\Microsoft.Office.Interop.Access.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <Private>True</Private>
@@ -210,6 +189,7 @@
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
       <Private>True</Private>
@@ -1210,29 +1190,38 @@
     <Content Include="dll\CrystalDecisions.ReportSource.dll" />
     <Content Include="dll\CrystalDecisions.Shared.dll" />
     <Content Include="dll\CrystalDecisions.Windows.Forms.dll" />
+    <Content Include="dll\dao.dll" />
     <Content Include="dll\DataTableExtend.dll" />
     <Content Include="dll\DevComponents.DotNetBar2.dll" />
-    <Content Include="dll\DevExpress.BonusSkins.v9.1.dll" />
-    <Content Include="dll\DevExpress.Data.v9.1.dll" />
+    <Content Include="dll\DevExpress.BonusSkins.v15.1.dll" />
+    <Content Include="dll\DevExpress.Data.v15.1.dll" />
     <Content Include="dll\DevExpress.Localization.v11.1.dll" />
     <Content Include="dll\DevExpress.OfficeSkins.v9.1.dll" />
-    <Content Include="dll\DevExpress.Utils.v9.1.dll" />
-    <Content Include="dll\DevExpress.XtraBars.v9.1.dll" />
-    <Content Include="dll\DevExpress.XtraEditors.v9.1.dll" />
-    <Content Include="dll\DevExpress.XtraGrid.v9.1.dll" />
-    <Content Include="dll\DevExpress.XtraLayout.v9.1.dll" />
-    <Content Include="dll\DevExpress.XtraNavBar.v9.1.dll" />
-    <Content Include="dll\DevExpress.XtraPrinting.v9.1.dll" />
-    <Content Include="dll\DevExpress.XtraTreeList.v9.1.dll" />
+    <Content Include="dll\DevExpress.Printing.v15.1.Core.dll" />
+    <Content Include="dll\DevExpress.SpellChecker.v15.1.Core.dll" />
+    <Content Include="dll\DevExpress.Utils.v15.1.dll" />
+    <Content Include="dll\DevExpress.XtraBars.v15.1.dll" />
+    <Content Include="dll\DevExpress.XtraEditors.v15.1.dll" />
+    <Content Include="dll\DevExpress.XtraGrid.v15.1.dll" />
+    <Content Include="dll\DevExpress.XtraLayout.v15.1.dll" />
+    <Content Include="dll\DevExpress.XtraNavBar.v15.1.dll" />
+    <Content Include="dll\DevExpress.XtraPrinting.v15.1.dll" />
+    <Content Include="dll\DevExpress.XtraTreeList.v15.1.dll" />
     <Content Include="dll\DotNetSpeech.dll" />
     <Content Include="dll\ExtendControl.dll" />
     <Content Include="dll\ICSharpCode.SharpZipLib.dll" />
     <Content Include="dll\IFramBase.dll" />
     <Content Include="dll\Interop.BarTender.dll" />
+    <Content Include="dll\Microsoft.Office.Interop.Access.dll" />
+    <Content Include="dll\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="dll\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="dll\Microsoft.ReportViewer.WinForms.dll" />
+    <Content Include="dll\Microsoft.Vbe.Interop.dll" />
     <Content Include="dll\NPOI.dll" />
     <Content Include="dll\NPOI.OOXML.dll" />
     <Content Include="dll\NPOI.OpenXml4Net.dll" />
     <Content Include="dll\NPOI.OpenXmlFormats.dll" />
+    <Content Include="dll\office.dll" />
     <Content Include="dll\ServerRequestProcess.dll" />
     <Content Include="dll\WcfSimpData.dll" />
     <Content Include="ukynda.ico" />
