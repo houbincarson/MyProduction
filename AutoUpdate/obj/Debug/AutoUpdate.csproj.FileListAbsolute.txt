@@ -33,3 +33,10 @@ F:\HB\MyProduction-master\MyProduction-master\AutoUpdate\bin\Debug\ICSharpCode.S
 F:\HB\MyProduction-master\MyProduction-master\AutoUpdate\obj\Debug\AutoUpdate.csprojResolveAssemblyReference.cache
 F:\HB\MyProduction-master\MyProduction-master\AutoUpdate\obj\Debug\AutoUpdate.exe
 F:\HB\MyProduction-master\MyProduction-master\AutoUpdate\obj\Debug\AutoUpdate.pdb
+F:\MyGit\MyProduction\AutoUpdate\bin\Debug\AutoUpdate.exe.config
+F:\MyGit\MyProduction\AutoUpdate\bin\Debug\AutoUpdate.exe
+F:\MyGit\MyProduction\AutoUpdate\bin\Debug\AutoUpdate.pdb
+F:\MyGit\MyProduction\AutoUpdate\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\MyGit\MyProduction\AutoUpdate\obj\Debug\AutoUpdate.csprojResolveAssemblyReference.cache
+F:\MyGit\MyProduction\AutoUpdate\obj\Debug\AutoUpdate.exe
+F:\MyGit\MyProduction\AutoUpdate\obj\Debug\AutoUpdate.pdb
