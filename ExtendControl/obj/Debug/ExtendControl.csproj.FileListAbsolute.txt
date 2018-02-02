@@ -1,0 +1,15 @@
+F:\MyGit\MyProduction\ExtendControl\bin\Debug\ExtendControl.dll
+F:\MyGit\MyProduction\ExtendControl\bin\Debug\ExtendControl.pdb
+F:\MyGit\MyProduction\ExtendControl\bin\Debug\DataTableExtend.dll
+F:\MyGit\MyProduction\ExtendControl\bin\Debug\IFramBase.dll
+F:\MyGit\MyProduction\ExtendControl\bin\Debug\DevExpress.Utils.v9.1.dll
+F:\MyGit\MyProduction\ExtendControl\bin\Debug\DevExpress.XtraGrid.v9.1.dll
+F:\MyGit\MyProduction\ExtendControl\bin\Debug\DevExpress.XtraEditors.v9.1.dll
+F:\MyGit\MyProduction\ExtendControl\bin\Debug\DevExpress.Data.v9.1.dll
+F:\MyGit\MyProduction\ExtendControl\bin\Debug\DevExpress.XtraLayout.v9.1.dll
+F:\MyGit\MyProduction\ExtendControl\obj\Debug\ExtendControl.csprojResolveAssemblyReference.cache
+F:\MyGit\MyProduction\ExtendControl\obj\Debug\ExtendControl.ExtendPopupGridEdit.resources
+F:\MyGit\MyProduction\ExtendControl\obj\Debug\ExtendControl.ExtPopupTree.resources
+F:\MyGit\MyProduction\ExtendControl\obj\Debug\ExtendControl.csproj.GenerateResource.Cache
+F:\MyGit\MyProduction\ExtendControl\obj\Debug\ExtendControl.dll
+F:\MyGit\MyProduction\ExtendControl\obj\Debug\ExtendControl.pdb
