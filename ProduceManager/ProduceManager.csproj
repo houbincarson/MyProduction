@@ -1196,7 +1196,6 @@
     <Content Include="dll\DevExpress.BonusSkins.v15.1.dll" />
     <Content Include="dll\DevExpress.Data.v15.1.dll" />
     <Content Include="dll\DevExpress.Localization.v11.1.dll" />
-    <Content Include="dll\DevExpress.OfficeSkins.v9.1.dll" />
     <Content Include="dll\DevExpress.Printing.v15.1.Core.dll" />
     <Content Include="dll\DevExpress.SpellChecker.v15.1.Core.dll" />
     <Content Include="dll\DevExpress.Utils.v15.1.dll" />
